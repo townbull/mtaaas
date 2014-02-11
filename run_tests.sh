@@ -13,6 +13,7 @@ IPS8="10.245.123.57 10.245.123.69 10.245.123.70 10.245.123.71 10.245.123.44
 ROOT="/root/mtaaas"
 TD="$ROOT/PEPClient/mtrbac/PEPClient/TestDriver.java"
 BT="$ROOT/PEPClient/mtrbac/PEPClient/BasicTest.java"
+#TMP="$ROOT/tmp"
 TMP=$(mktemp tmp.XXXXXX)
 COPY="scp .ssh/id_rsa .ssh/id_rsa.pub"
 ###UBUNTU
@@ -20,9 +21,10 @@ COPY="scp .ssh/id_rsa .ssh/id_rsa.pub"
 ###SMARTOS
 ICMD="pkgin install -y scmgit sun-jdk6-6.0.26 apache-ant-1.8.4"
 RCMD="rm centos128-1k.txt; 
-	nohup ant -buildfile /root/PEPClient/build.xml -e run \
+	nohup ant -buildfile $ROOT/PEPClient/build.xml -e run \
 	> centos128-1k.txt 2>&1 &"
-GITCMD="ls $ROOT || git clone https://github.com/townbull/mtaaas.git $ROOT"
+GITCMD="git clone https://github.com/townbull/mtaaas.git $ROOTi || \
+	cd $ROOT; git pull origin master"
 PGM="cd $ROOT; scp -r CloudSvcPEP/ PEPClient/ /root/src/"
 CHGITER="sed 's/< [0-9]*;/< $3;/g' $TD > $TMP && mv $TMP $TD" 
 CHGPDP="sed 's/10.245.[0-9]*.[0-9]*/$4/g' $BT > $TMP && mv $TMP $BT"
@@ -58,16 +60,18 @@ then
         echo "Install Java & Ant"
         echo ssh root@$ip $ICMD
         ssh root@$ip $ICMD
-        echo "Copying PEP program source"
-        echo $PGM root@$ip:
-        ssh root@$ip $GITCMD
-#        $PGM root@$ip:$ROOT
 	done
 
 elif [ $1 == "--config" ] || [ $1 == "-c" ]   #require $2 $3 $4
 then
 	for ip in $IPS
-	do
+	do        
+		echo "Copying PEP source"
+        echo ssh root@$ip $GITCMD
+        ssh root@$ip $GITCMD
+#        echo $PGM root@$ip:
+#        $PGM root@$ip:$ROOT
+
 		echo "Changing iteration times on PEP $ip"
 		ssh root@$ip "$CHGITER"
 		echo "Changing PDP IP address on PEP $ip"
