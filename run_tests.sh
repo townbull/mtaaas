@@ -13,8 +13,8 @@ IPS8="10.245.123.57 10.245.123.69 10.245.123.70 10.245.123.71 10.245.123.44
 ROOT="/root/mtaaas"
 TD="$ROOT/PEPClient/mtrbac/PEPClient/TestDriver.java"
 BT="$ROOT/PEPClient/mtrbac/PEPClient/BasicTest.java"
-#TMP="$ROOT/tmp"
-TMP=$(mktemp tmp.XXXXXX)
+TMP="$ROOT/tmp"
+#TMP=$(mktemp tmp.XXXXXX)
 COPY="scp .ssh/id_rsa .ssh/id_rsa.pub"
 ###UBUNTU
 #ICMD="apt-get update; apt-get install -y openmpi-bin"

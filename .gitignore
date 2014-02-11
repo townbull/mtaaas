@@ -1,6 +1,7 @@
-*.class
+*.swp
+# *.class
 
 # Package Files #
 # *.jar     # jar files from sun xacml are needed
-*.war
-*.ear
+# *.war
+# *.ear
