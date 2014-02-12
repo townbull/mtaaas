@@ -22,7 +22,7 @@
 	<Target />
 
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:rbac:TPS:t2:user:t1:manager:role" PolicyCombiningAlgId="&policy-combine;permit-overrides">
+		PolicySetId="urn:rbac:TPS:t1:user:t1:manager:role" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
@@ -43,7 +43,7 @@
 		<PolicySetIdReference>urn:rbac:PPS:t1:manager:role</PolicySetIdReference>
 	</PolicySet>
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:rbac:TPS:t2:user:t1:employee:role" PolicyCombiningAlgId="&policy-combine;permit-overrides">
+		PolicySetId="urn:rbac:TPS:t1:user:t1:employee:role" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
