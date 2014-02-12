@@ -42,7 +42,7 @@
 		<!-- Use permissions associated with the manager role -->
 		<PolicySetIdReference>urn:rbac:TPS:t1</PolicySetIdReference>
 	</PolicySet>
-		<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
 		PolicySetId="urn:rbac:RPS:t1:employee:role" PolicyCombiningAlgId="&policy-combine;deny-overrides">
 		<Target>
 			<Subjects>
