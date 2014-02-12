@@ -1,4 +1,4 @@
-*.txt
+!/src
 *.out
 *.swp
 *.DS_Store
