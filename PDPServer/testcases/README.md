@@ -10,16 +10,16 @@ Test Cases
 | MT-RBAC001PPSt2manager.xml 		| PPS:t2:manager --> [sign] purchase order <br/> PPS:t2:manager --> PPS:t2:employee |
 | MT-RBAC001Request.xml 			| Anne (t1:manager) --> [create] purchase order in t1 |
 | MT-RBAC001Response.xml 			| Permit |
-| MT-RBAC001TPSt1.xml 				| TPS:t2 or TPS:t1:manager --> PPS:t1:manager |
+| MT-RBAC001TPSt1.xml 				| TPS:t2 and TPS:t1:manager --> PPS:t1:manager |
 | MT-RBAC001TPSt2.xml 				| TPS:t1:manager --> PPS:t1:manager<br/> TPS:t2:manager --> PPS:t2:manager<br/> TPS:t2:employee --> PPS:t2:employee
-| MT-RBAC002Policy.xml
-| MT-RBAC002PPSt1employee.xml
-| MT-RBAC002PPSt1manager.xml
-| MT-RBAC002PPSt2employee.xml
-| MT-RBAC002PPSt2manager.xml
-| MT-RBAC002Request.xml
-| MT-RBAC002Response.xml
-| MT-RBAC002TPSt1.xml
+| MT-RBAC002Policy.xml 				| RPS:t1:manager --> TPS:t1<br/> RPS:t1:employee --> TPS:t1 <br/> RPS:t1:resource --> TPS:t1 |
+| MT-RBAC002PPSt1employee.xml 		| PPS:t1:employee --> [create] purchase order |
+| MT-RBAC002PPSt1manager.xml 		| PPS:t1:manager --> [sign] purchase order <br/> PPS:t1:manager --> PPS:t1:employee |
+| MT-RBAC002PPSt2employee.xml 		| PPS:t2:employee --> [create] purchase order |
+| MT-RBAC002PPSt2manager.xml 		| PPS:t2:manager --> [sign] purchase order <br/> PPS:t2:manager --> PPS:t2:employee |
+| MT-RBAC002Request.xml 			| Anne (t2:manager) --> [create] purchase order in t1 |
+| MT-RBAC002Response.xml 			| Permit |
+| MT-RBAC002TPSt1.xml 				| TPS:t1 and TPS:t1:manager --> PPS:t1:manager<br/> TPS:t1 and TPS:t1:employee --> PPS:t1:employee<br/> TPS:t2 and TPS:t1:employee --> PPS:t1:employee<br/> TPS:{subj_role = t2:manager} and TPS:{resrc_tenant = t1} --> PPS:t1:manager|
 | MT-RBAC003Policy.xml
 | MT-RBAC003PPSt1employee.xml
 | MT-RBAC003PPSt1manager.xml
