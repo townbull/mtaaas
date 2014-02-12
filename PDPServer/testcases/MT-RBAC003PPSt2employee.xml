@@ -29,7 +29,7 @@
 		<Target />
 
 		<!-- Permission to sign a purchase order -->
-		<Rule RuleId="Permission:to:sign:a:purchase:order" Effect="Permit">
+		<Rule RuleId="Permission:to:create:a:purchase:order" Effect="Permit">
 			<Target>
 				<Resources>
 					<Resource>
