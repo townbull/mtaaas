@@ -2,17 +2,16 @@ Test Cases
 =========================
 
 | File								| Content Description			|
-|*----------------------------------|*------------------------------|
-| MT-RBAC001Policy.xml 				| RPS:t1:manager --> TPS:t1<br/>|
-|									| RPS:t1:employee --> TPS:t1 	|
-| MT-RBAC001PPSt1employee.xml
-| MT-RBAC001PPSt1manager.xml
-| MT-RBAC001PPSt2employee.xml
-| MT-RBAC001PPSt2manager.xml
-| MT-RBAC001Request.xml
-| MT-RBAC001Response.xml
-| MT-RBAC001TPSt1.xml
-| MT-RBAC001TPSt2.xml
+|-----------------------------------|-------------------------------|
+| MT-RBAC001Policy.xml 				| RPS:t1:manager --> TPS:t1<br/> RPS:t1:employee --> TPS:t1 	|
+| MT-RBAC001PPSt1employee.xml 		| PPS:t1:employee --> [create] purchase order |
+| MT-RBAC001PPSt1manager.xml 		| PPS:t1:manager --> [sign] purchase order <br/> PPS:t1:manager --> PPS:t1:employee |
+| MT-RBAC001PPSt2employee.xml 		| PPS:t2:employee --> [create] purchase order |
+| MT-RBAC001PPSt2manager.xml 		| PPS:t2:manager --> [sign] purchase order <br/> PPS:t2:manager --> PPS:t2:employee |
+| MT-RBAC001Request.xml 			| Anne (t1:manager) --> [create] purchase order in t1 |
+| MT-RBAC001Response.xml 			| Permit |
+| MT-RBAC001TPSt1.xml 				| TPS:t2 or TPS:t1:manager --> PPS:t1:manager |
+| MT-RBAC001TPSt2.xml 				| TPS:t1:manager --> PPS:t1:manager<br/> TPS:t2:manager --> PPS:t2:manager<br/> TPS:t2:employee --> PPS:t2:employee
 | MT-RBAC002Policy.xml
 | MT-RBAC002PPSt1employee.xml
 | MT-RBAC002PPSt1manager.xml
