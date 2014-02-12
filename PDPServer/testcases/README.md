@@ -36,7 +36,7 @@ Test Cases
 | MT-RBAC004PPSt2manager.xml 		| PPS:t2:manager --> [sign] purchase order <br/> PPS:t2:manager --> PPS:t2:employee |
 | MT-RBAC004Request.xml 			| Anne (t2:manager) --> [create] purchase order in t1 |
 | MT-RBAC004Response.xml 			| Permit |
-| MT-RBAC004TDPRPSt1.xml ** FIXME **			| TDPRPS:t2 --> PPS:t1:manager and  PPS:t1:employee<br/> TDPRPS:t1:user:t1:employee --> PPS:t1:employee<br/> TDPRPS:t1:user:t1:manager --> PPS:t1:manager|
+| MT-RBAC004TDPRPSt1.xml `FIXME`			| TDPRPS:t2 --> PPS:t1:manager and  PPS:t1:employee<br/> TDPRPS:t1:user:t1:employee --> PPS:t1:employee<br/> TDPRPS:t1:user:t1:manager --> PPS:t1:manager|
 | MT-RBAC004TPSt1.xml 				| TPS:t1 and TPS:t1:manager --> TDPRPS:t1:user:t1:manager<br/> TPS:t1 and TPS:t1:employee --> TDPRPS:t1:user:t1:employee<br/> TPS:t2 and TPS:t1:manager --> TDPRPS:t1:manager<br/> TPS:t2 and TPS:t1:employee --> TDPRPS:t1:employee<br/> TPS:t2:manager and TPS:t1:resource --> TDPRPS:t1:manager|
 | MT-RBACPolicy.xml
 | MT-RBACPPSt1employee.xml
