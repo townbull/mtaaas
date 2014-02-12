@@ -1,7 +1,9 @@
+!/src
+!/CloudSvcPEP
 *.txt
 *.out
 *.swp
-*.DS_Store
+.DS_Store
 # *.class
 
 # Package Files #
