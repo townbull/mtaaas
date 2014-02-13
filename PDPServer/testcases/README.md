@@ -1,5 +1,28 @@
 Test Cases
 =========================
+The policy specifications are written in the extensible access control markup language (XACML). The normative specifica- tion of RBAC policies with XACML2.0 language has been proposed by OASIS XACML TC [1](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml).
+
+### MT-RBAC Policy Specification
+
+### MTAS Policy Specification
+There are three kinds of policysets: Role PolicySet (RPS), Permission PolicySet (PPS), and Trust PolicySet (TPS). The policy authorization flow can be expressed by the following:
+
+```
+RPS:i1:role --> TPS:i1   # maintained by i1
+RPS:i2:role --> TPS:i2   # maintained by i2
+
+TPS:i1 --> i1:resource --> PPS:i1   # maintained by i1
+TPS:i1 --> i2:resource --> PPS:i2   # maintained by i2
+TPS:i2 --> i2:resource --> PPS:i2   # maintained by i2
+
+PPS:i1 --> i1:resource --> permit   # access granted
+      \--> TPS:i1                   # looking for junior roles (maybe from i2)
+PPS:i2 --> i2:resource --> permit   # access granted
+      \--> TPS:i2                   # looking for junior roles
+
+```
+
+### Test Policy Catalog
 
 | File								| Description					|
 |-----------------------------------|-------------------------------|
