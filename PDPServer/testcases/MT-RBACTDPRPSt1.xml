@@ -18,7 +18,7 @@
 ]>
 
 <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-	PolicySetId="urn:rbac:TIPRPS:t1:t2" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+	PolicySetId="urn:rbac:TDPRPS:t1:t2" PolicyCombiningAlgId="&policy-combine;deny-overrides">
 	<Target />
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:1.0:policy:schema:os"
 		PolicySetId="urn:rbac:TDPRPS:t1:employee:role:t2"
