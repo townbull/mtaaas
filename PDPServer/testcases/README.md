@@ -24,6 +24,7 @@ PPS:i2 --> i2:resource --> permit   # access granted
 ```
 
 #### Test case Design
+Assume t1 specified a trust relation: t1 trusts t2 and a user from t1 requests to access resources in t2.
 
 ```
 
@@ -31,20 +32,30 @@ Policy.xml
 >>> subj:t1 --> TPS:t1
 >>> subj:t2 --> TPS:t2
 
-TPS:t1            # trust relation: t1 trusts t2
+TPS:t1            # maintained by t2
 >>> subj:t1 --> RPS:t1
+# trust relation: t1 trusts t2
 >>> subj:t1 --> RPS:t2
+
+TPS:t2            # maintained by t2
 >>> subj:t2 --> RPS:t2
 
-TPS:t2
->>> subj:t2 --> RPS:t2
+RPS:t1            # maintained by t1
+>>> role:t1:manager --> PPS:t1:manager
+>>> role:t1:manager --> RPS:t1:employee
+>>> role:t1:employee --> PPS:t1:employee
 
-RPS:t1
->>> role:t1:manager --> PPS:t1:manager
->>> role:t1:manager --> PPS:t1:manager
->>> role:t1:manager --> PPS:t1:manager
->>> role:t1:manager --> PPS:t1:manager
->>> role:t1:manager --> PPS:t1:manager
+RPS:t2            # maintained by t2
+# cross-tenant permission assignment -- t1:manager has t2:managers permissions
+>>> role:t1:manager --> PPS:t2:manager
+# cross-tenant role hierarchy assignment -- t2:manager << t1:manager
+>>> role:t1:manager --> RPS:t2:manager
+>>> role:t2:manager --> PPS:t2:manager
+>>> role:t2:manager --> RPS:t2:employee
+>>> role:t2:employee --> PPS:t2:employee
+
+PPS:t1: ... ...
+PPS:t2: ... ...
 
 ```
 
