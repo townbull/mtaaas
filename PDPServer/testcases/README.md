@@ -8,8 +8,9 @@ The policy specifications are written in the extensible access control markup la
 There are three kinds of policysets: Role PolicySet (RPS), Permission PolicySet (PPS), and Trust PolicySet (TPS). The policy authorization flow can be expressed by the following:
 
 ```
-RPS:i1:role --> TPS:i1   # maintained by i1
-RPS:i2:role --> TPS:i2   # maintained by i2
+
+RPS:i1:role --> TPS:i1              # maintained by i1
+RPS:i2:role --> TPS:i2              # maintained by i2
 
 TPS:i1 --> i1:resource --> PPS:i1   # maintained by i1
 TPS:i1 --> i2:resource --> PPS:i2   # maintained by i2
@@ -19,6 +20,31 @@ PPS:i1 --> i1:resource --> permit   # access granted
       \--> TPS:i1                   # looking for junior roles (maybe from i2)
 PPS:i2 --> i2:resource --> permit   # access granted
       \--> TPS:i2                   # looking for junior roles
+
+```
+
+#### Test case Design
+
+```
+
+Policy.xml
+>>> subj:t1 --> TPS:t1
+>>> subj:t2 --> TPS:t2
+
+TPS:t1            # trust relation: t1 trusts t2
+>>> subj:t1 --> RPS:t1
+>>> subj:t1 --> RPS:t2
+>>> subj:t2 --> RPS:t2
+
+TPS:t2
+>>> subj:t2 --> RPS:t2
+
+RPS:t1
+>>> role:t1:manager --> PPS:t1:manager
+>>> role:t1:manager --> PPS:t1:manager
+>>> role:t1:manager --> PPS:t1:manager
+>>> role:t1:manager --> PPS:t1:manager
+>>> role:t1:manager --> PPS:t1:manager
 
 ```
 
