@@ -8,9 +8,11 @@
 <!ENTITY subject "urn:oasis:names:tc:xacml:1.0:subject:">
 <!ENTITY role "urn:oasis:names:tc:xacml:2.0:subject:role">
 <!ENTITY roles "urn:oasis:names:tc:xacml:2.0:subject:role-values:">
-<!ENTITY tenant "urn:oasis:names:tc:xacml:2.0:tenant">
+<!ENTITY tenant "urn:oasis:names:tc:xacml:2.0:subject:tenant">
 <!ENTITY tenants "urn:oasis:names:tc:xacml:2.0:subject:tenant-values:">
 <!ENTITY resource "urn:oasis:names:tc:xacml:1.0:resource:">
+<!ENTITY resource-tenant "urn:oasis:names:tc:xacml:2.0:resource:tenant">
+<!ENTITY resource-tenants "urn:oasis:names:tc:xacml:2.0:resource:tenant-values:">
 <!ENTITY action "urn:oasis:names:tc:xacml:1.0:action:">
 <!ENTITY actions "urn:oasis:names:tc:xacml:2.0:actions:">
 <!ENTITY environment "urn:oasis:names:tc:xacml:1.0:environment:">
