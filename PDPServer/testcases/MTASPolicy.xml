@@ -22,16 +22,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os
         access_control-xacml-2.0-policy-schema-os.xsd"
-	PolicySetId="urn:mtas:RolePolicySets" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+	PolicySetId="urn:mtas:TPS" PolicyCombiningAlgId="&policy-combine;deny-overrides">
 	<Target />
-
+	<!-- urn:mtas:TPS:t1 maintained by i1 -->
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:SPS:t1" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:TPS:i1" PolicyCombiningAlgId="&policy-combine;deny-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
 					<SubjectMatch MatchId="&function;anyURI-equal">
-						<AttributeValue DataType="&xml;anyURI">&tenants;t1</AttributeValue>
+						<AttributeValue DataType="&xml;anyURI">&tenants;i1</AttributeValue>
 						<SubjectAttributeDesignator
 							AttributeId="&tenant;" DataType="&xml;anyURI" />
 					</SubjectMatch>
@@ -39,16 +39,18 @@
 			</Subjects>
 		</Target>
 
-		<PolicySetIdReference>urn:mtas:TPS:t1</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i1</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i2</PolicySetIdReference>
 	</PolicySet>
 	
+	<!-- urn:mtas:TPS:t2 maintained by i2 -->
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:SPS:t2" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:TPS:i2" PolicyCombiningAlgId="&policy-combine;deny-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
 					<SubjectMatch MatchId="&function;anyURI-equal">
-						<AttributeValue DataType="&xml;anyURI">&tenants;t2</AttributeValue>
+						<AttributeValue DataType="&xml;anyURI">&tenants;i2</AttributeValue>
 						<SubjectAttributeDesignator
 							AttributeId="&tenant;" DataType="&xml;anyURI" />
 					</SubjectMatch>
@@ -56,7 +58,7 @@
 			</Subjects>
 		</Target>
 
-		<PolicySetIdReference>urn:mtas:TPS:t2</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i2</PolicySetIdReference>
 	</PolicySet>
 
 </PolicySet>
