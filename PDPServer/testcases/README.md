@@ -28,7 +28,7 @@ Assume t1 specified a trust relation: t1 trusts t2 and a user from t1 requests t
 
 ```
 
-Policy.xml
+Policy.xml        # SPS
 >>> subj:t1 --> TPS:t1
 >>> subj:t2 --> TPS:t2
 
