@@ -22,7 +22,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os
         access_control-xacml-2.0-policy-schema-os.xsd"
-	PolicySetId="urn:rbac:RolePolicySets" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+	PolicySetId="urn:mtas:RolePolicySets" PolicyCombiningAlgId="&policy-combine;deny-overrides">
 	<Target />
 
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
