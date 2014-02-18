@@ -22,12 +22,16 @@
 	operation or maintenance of any nuclear facility. -->
 
 <test name="MTAS">
-	<policySetReference ref="urn:rbac:PPS:t2:manager:role">PPSt2manager.xml</policySetReference>
-	<policySetReference ref="urn:rbac:PPS:t2:employee:role">PPSt2employee.xml</policySetReference>
-	<policySetReference ref="urn:rbac:TPS:t1">TPSt1.xml</policySetReference>
-	<policySetReference ref="urn:rbac:TIPRPS:t1:employee:role">TIPRPSt1.xml</policySetReference>
-	<policySetReference ref="urn:rbac:TDPRPS:t1:employee:role">TDPRPSt1.xml</policySetReference>
-	<policySetReference ref="urn:rbac:PPS:t1:manager:role">PPSt1manager.xml</policySetReference>
-	<policySetReference ref="urn:rbac:PPS:t1:employee:role">PPSt1employee.xml</policySetReference>
+	<policySetReference ref="urn:mtas:PPS:i1:manager">PPS.xml</policySetReference>
+	<policySetReference ref="urn:mtas:PPS:i1:employee">PPS.xml</policySetReference>
+	<policySetReference ref="urn:mtas:PPS:i2:manager">PPS.xml</policySetReference>
+	<policySetReference ref="urn:mtas:PPS:i2:employee">PPS.xml</policySetReference>
+	<policySetReference ref="urn:mtas:RPS:i1">RPS.xml</policySetReference>
+	<policySetReference ref="urn:mtas:RPS:i2">RPS.xml</policySetReference>
+	<policySetReference ref="urn:mtas:RPS:i1:employee">RPS.xml</policySetReference>
+	<policySetReference ref="urn:mtas:RPS:i1:employee">RPS.xml</policySetReference>
+	<policySetReference ref="urn:mtas:RPS:i1:manager:i2">RPS.xml</policySetReference>
+
+
 </test>
 
