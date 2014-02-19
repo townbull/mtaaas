@@ -19,16 +19,21 @@
 <!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:rbac:">
 ]>
 
+
+<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+        PolicySetId="urn:mtas:RPS" PolicyCombiningAlgId="&policy-combine;permit-overrides">
+        <Target />
+
 <!-- urn:mtas:RPS:i1 maintained by i1 -->
 
 <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os
         access_control-xacml-2.0-policy-schema-os.xsd"
-	PolicySetId="urn:mtas:RPS:i1" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+	PolicySetId="urn:mtas:RPS:i1" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 	<Target />
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:RPS:i1:manager" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:RPS:i1:manager" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
@@ -46,7 +51,7 @@
 	</PolicySet>
 
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:RPS:i1:employee" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:RPS:i1:employee" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
@@ -70,12 +75,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os
         access_control-xacml-2.0-policy-schema-os.xsd"
-	PolicySetId="urn:mtas:RPS:i2" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+	PolicySetId="urn:mtas:RPS:i2" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 	<Target />
 	
 	<!-- **NOTE:** In MTAS urn:mtas:RPS:i1:manager:i2 maintained by i2 -->
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:RPS:i1:manager:i2" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:RPS:i1:manager:i2" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
@@ -96,7 +101,7 @@
 	</PolicySet>
 		
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:RPS:i2:manager" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:RPS:i2:manager" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
@@ -114,7 +119,7 @@
 	</PolicySet>
 
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:RPS:i2:employee" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:RPS:i2:employee" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
@@ -130,4 +135,5 @@
 		<PolicySetIdReference>urn:mtas:PPS:i2:employee</PolicySetIdReference>
 	</PolicySet>
 
+</PolicySet>
 </PolicySet>

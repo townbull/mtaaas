@@ -24,11 +24,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os
         access_control-xacml-2.0-policy-schema-os.xsd"
-	PolicySetId="urn:mtas:TPS" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+	PolicySetId="urn:mtas:TPS" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 	<Target />
 	<!-- urn:mtas:TPS:i1 maintained by i1 -->
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:TPS:i1" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:TPS:i1" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
@@ -47,7 +47,7 @@
 	
 	<!-- urn:mtas:TPS:i2 maintained by i2 -->
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:TPS:i2" PolicyCombiningAlgId="&policy-combine;deny-overrides">
+		PolicySetId="urn:mtas:TPS:i2" PolicyCombiningAlgId="&policy-combine;permit-overrides">
 		<Target>
 			<Subjects>
 				<Subject>
