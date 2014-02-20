@@ -29,7 +29,7 @@
 		</Attribute>
 		<Attribute AttributeId="&role;" DataType="&xml;anyURI"
 			IncludeInResult="false">
-			<AttributeValue>&roles;i1:manager</AttributeValue>
+			<AttributeValue>&roles;i2:manager</AttributeValue>
 		</Attribute>
 		<Attribute AttributeId="&tenant;" DataType="&xml;anyURI"
 			IncludeInResult="false">
@@ -49,7 +49,7 @@
 	<Action>
 		<Attribute AttributeId="&action;action-id" DataType="&xml;string"
 			IncludeInResult="false">
-			<AttributeValue>sign</AttributeValue>
+			<AttributeValue>create</AttributeValue>
 		</Attribute>
 	</Action>
 </Request>
