@@ -2,7 +2,9 @@
 !/CloudSvcPEP
 *.txt
 *.out
+*.log
 *.swp
+*.swo
 .DS_Store
 # *.class
 
