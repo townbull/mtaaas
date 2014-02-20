@@ -43,7 +43,7 @@
 		</Attribute>
 		<Attribute AttributeId="&resource-tenant;" DataType="&xml;anyURI"
 			IncludeInResult="false">
-			<AttributeValue>&resource-tenants;i2</AttributeValue>
+			<AttributeValue>&resource-tenants;i1</AttributeValue>
 		</Attribute>
 	</Resource>
 	<Action>

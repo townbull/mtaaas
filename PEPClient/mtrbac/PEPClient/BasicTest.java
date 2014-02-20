@@ -221,7 +221,7 @@ public class BasicTest implements Test
         		
         	try{
     			//1. creating a socket to connect to the server
-    			requestSocket = new Socket("10.245.123.61", 55555);
+    			requestSocket = new Socket("10.245.122.80", 55555);
     			System.out.println("Connected to PDP Server in port 55555");
     			//2. get Input and Output streams
     			os = requestSocket.getOutputStream();
