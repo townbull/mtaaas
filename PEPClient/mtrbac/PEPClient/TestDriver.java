@@ -190,7 +190,7 @@ public class TestDriver
         
 
         t0 = new Date().getTime();
-        for(int i = 0; i < 1000; i++)
+        for(int i = 0; i < 10; i++)
         {
         	Iterator it = tests.iterator();
 	        while (it.hasNext()) {

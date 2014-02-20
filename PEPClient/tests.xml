@@ -24,7 +24,22 @@
 
 <tests>
 
+	<group name="MTAS">
 
+		<test name="001" />
+		<test name="002" />
+		<test name="003" />
+		<test name="004" />
+		<test name="005" />
+		<test name="006" />
+		<test name="007" />
+		<test name="008" />
+		<test name="009" />
+		<test name="010" />
+		
+  </group>
+	
+	<!--
 	<group name="MT-RBAC">
 
 		<test name="001" />
@@ -39,7 +54,7 @@
 		<test name="010" />
 
 	</group>
-	
+	-->
 
 	<!--  
 	
