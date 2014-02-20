@@ -22,13 +22,14 @@ COPY="scp /root/.ssh/id_rsa /root/.ssh/id_rsa.pub"
 ###UBUNTU
 #ICMD="apt-get update; apt-get install -y openmpi-bin"
 ###SMARTOS
-ICMD="pkgin install -y scmgit sun-jdk6-6.0.26 apache-ant-1.8.4"
+ICMDSMARTOS="pkgin install -y scmgit sun-jdk6-6.0.26 apache-ant-1.8.4"
+ICMDCENTOS="yum install -y java ant git"
 RUNPEP="rm $ROOT/centos128-1k.txt; 
 	nohup ant -buildfile $ROOT/PEPClient/build.xml -e run \
 	> $ROOT/centos128-1k.txt 2>&1 &"
-RUNPDP="rm centos128-1k.txt; 
+RUNPDP="rm $ROOT/rs.txt; 
 	nohup ant -buildfile $ROOT/PDPServer/build.xml -e run \
-	> centos128-1k.txt 2>&1 &"
+	> $ROOT/rs.txt 2>&1 &"
 GITCMD="git clone git@github.com:townbull/mtaaas.git $ROOT || \
 	cd $ROOT; git pull origin master"
 PGM="cd $ROOT; scp -r CloudSvcPEP/ PEPClient/ /root/src/"
@@ -57,6 +58,13 @@ esac
 
 if [ $1 == "--init" ] || [ $1 == "-i" ]   #just require $2 
 then
+	if [ $2 == "pdp" ]
+	then
+		ICMD=$ICMDCENTOS
+	else
+		ICMD=$ICMDSMARTOS
+	fi
+
     for ip in $IPS 
 	do
         echo "Copying SSH Keys to $ip"
@@ -74,9 +82,12 @@ elif [ $1 == "--config" ] || [ $1 == "-c" ]   #require $2 $3 $4
 then
 	if [ $2 == "pdp" ]
 	then
-		echo "Copying PDP source"
-		echo ssh root@$ip $GITCMD
-		ssh root@$ip $GITCMD
+		for ip in $IPS
+		do
+			echo "Copying PDP source"
+			echo ssh root@$ip $GITCMD
+			ssh root@$ip $GITCMD
+		done
 	else
 		for ip in $IPS
 		do        
@@ -96,11 +107,17 @@ then
 
 elif [ $1 == "--run" ] || [ $1 == "-r" ]   #require $2
 then
-	for ip in $IPS
-	do
-		echo "Running PEP on $ip"
-		ssh root@$ip $RUNPEP
-	done
+	if [ $2 == "pdp" ]
+	then
+		echo "Running PDP on $3"
+		ssh root@$3 "$ROOT/startpdp.sh"
+	else	
+		for ip in $IPS
+		do
+			echo "Running PEP on $ip"
+			ssh root@$ip $RUNPEP
+		done
+	fi
 
 else 
 	echo $USAGE
