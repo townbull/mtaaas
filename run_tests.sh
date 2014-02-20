@@ -72,13 +72,6 @@ then
 
 elif [ $1 == "--config" ] || [ $1 == "-c" ]   #require $2 $3 $4
 then
-
-	if [ $# -lt 4 ]
-	then
-		echo $USAGE
-		exit 1
-	fi
-
 	if [ $2 == "pdp" ]
 	then
 		echo "Copying PDP source"
