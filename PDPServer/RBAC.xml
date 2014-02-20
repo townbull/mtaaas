@@ -22,7 +22,7 @@
 	that this software is not designed or intended for use in the design, construction, 
 	operation or maintenance of any nuclear facility. -->
 
-<test name="RBAC002">
+<test name="RBAC">
 	<policySetReference ref="urn:rbac:PPS:manager:role">PolicySetPPSmanager.xml</policySetReference>
 	<policySetReference ref="urn:rbac:PPS:employee:role">PolicySetPPSemployee.xml</policySetReference>
 </test>
