@@ -24,10 +24,10 @@ COPY="scp /root/.ssh/id_rsa /root/.ssh/id_rsa.pub"
 ###SMARTOS
 ICMDSMARTOS="pkgin install -y scmgit sun-jdk6-6.0.26 apache-ant-1.8.4"
 ICMDCENTOS="yum install -y java ant git"
-RUNPEP="rm $ROOT/centos128-1k.txt; 
+RUNPEP="rm $ROOT/$3; 
 	nohup ant -buildfile $ROOT/PEPClient/build.xml -e run \
-	> $ROOT/centos128-1k.txt 2>&1 &"
-RUNPDP="rm $ROOT/rs.txt; 
+	> $ROOT/$3 2>&1 &"
+RUNPDP="killall java; rm $ROOT/rs.txt; 
 	nohup ant -buildfile $ROOT/PDPServer/build.xml -e run \
 	> $ROOT/rs.txt 2>&1 &"
 GITCMD="git clone git@github.com:townbull/mtaaas.git $ROOT || \
