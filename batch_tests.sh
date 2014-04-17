@@ -31,12 +31,13 @@ echo "Batch teses begins at: $(date +%Y%m%d-%T)"
 for p in $PDPS
 do
 	pdp="PDP$p"
+	# get the IP address for the specific PDP
 	pdp=${!pdp}
 	echo $pdp
 
 for peps in $PEPS
 do
-
+	# PEPs are configured in utils.sh
 for runs in $RUNS
 do
 
