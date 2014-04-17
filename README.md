@@ -16,4 +16,18 @@ CloudSvcPEP --  A PEP runs with the cloud service receiving requests from the cl
 Client      --  A cloud service client requesting access to cloud resource.
 ``` 
 
-> **Note:** If error message "Exception: null" constantly prompted when startpdp.sh is run, check if there are multiple servers running on the same port. 
+### How to Run?
+
+Change the IP addresses of PDPs in batch_tests.sh and PEPs in utils.sh to your deployment. Then run:
+```
+$ ./batch_tests.sh
+```
+The tests will automatically run and the results will be stored in pdpresults and pepresults. Some other changes may apply to the scripts before successful runs.
+
+
+
+> **Note:** If error message "Exception: null" constantly prompted when startpdp.sh is run, check if there are multiple servers running on the same port. If so, use:
+```
+$ killall ant
+```
+
