@@ -16,21 +16,21 @@
 <!ENTITY action "urn:oasis:names:tc:xacml:1.0:action:">
 <!ENTITY actions "urn:oasis:names:tc:xacml:2.0:actions:">
 <!ENTITY environment "urn:oasis:names:tc:xacml:1.0:environment:">
-<!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:rbac:">
+<!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:mtas:">
 ]>
 
 
-<!-- urn:mtas:RPS:i0000 maintained by i0000 -->
+<!-- urn:mtas:RPS:i0001 maintained by i0001 -->
 <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os
         access_control-xacml-2.0-policy-schema-os.xsd"
-        PolicySetId="urn:mtas:RPS:i0000" PolicyCombiningAlgId="&policy-combine;first-applicable">
+        PolicySetId="urn:mtas:RPS:i0001" PolicyCombiningAlgId="&policy-combine;first-applicable">
         <Target />
 
-        <!-- **NOTE:** In MTAS urn:mtas:RPS:i0000:manager:i0000 maintained by i0000 -->
+        <!-- **NOTE:** In MTAS urn:mtas:RPS:i0000:manager:i0001 maintained by i0001 -->
         <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-                PolicySetId="urn:mtas:RPS:i0000:manager:i0000" PolicyCombiningAlgId="&policy-combine;first-applicable">
+                PolicySetId="urn:mtas:RPS:i0000:manager:i0001" PolicyCombiningAlgId="&policy-combine;first-applicable">
                 <Target>
                         <Subjects>
                                 <Subject>
@@ -43,20 +43,20 @@
                         </Subjects>
                 </Target>
 
-                <!-- cross-tenant PA indicating i0000:manager can access PPS:i0000:manager  -->
-                <PolicySetIdReference>urn:mtas:PPS:i0000:manager</PolicySetIdReference>
+                <!-- cross-tenant PA indicating i0000:manager can access PPS:i0001:manager  -->
+                <PolicySetIdReference>urn:mtas:PPS:i0001:manager</PolicySetIdReference>
 
-                <!-- cross-tenant RH indicating i0000:manager >> i0000:employee  -->
-                <PolicySetIdReference>urn:mtas:RPS:i0000:employee</PolicySetIdReference>
+                <!-- cross-tenant RH indicating i0000:manager >> i0001:employee  -->
+                <PolicySetIdReference>urn:mtas:RPS:i0001:employee</PolicySetIdReference>
         </PolicySet>
 
         <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-                PolicySetId="urn:mtas:RPS:i0000:manager" PolicyCombiningAlgId="&policy-combine;first-applicable">
+                PolicySetId="urn:mtas:RPS:i0001:manager" PolicyCombiningAlgId="&policy-combine;first-applicable">
                 <Target>
                         <Subjects>
                                 <Subject>
                                         <SubjectMatch MatchId="&function;anyURI-equal">
-                                                <AttributeValue DataType="&xml;anyURI">&roles;i0000:manager</AttributeValue>
+                                                <AttributeValue DataType="&xml;anyURI">&roles;i0001:manager</AttributeValue>
                                                 <SubjectAttributeDesignator
                                                         AttributeId="&role;" DataType="&xml;anyURI" />
                                         </SubjectMatch>
@@ -64,17 +64,17 @@
                         </Subjects>
                 </Target>
 
-                <PolicySetIdReference>urn:mtas:PPS:i0000:manager</PolicySetIdReference>
-                <PolicySetIdReference>urn:mtas:RPS:i0000:employee</PolicySetIdReference>
+                <PolicySetIdReference>urn:mtas:PPS:i0001:manager</PolicySetIdReference>
+                <PolicySetIdReference>urn:mtas:RPS:i0001:employee</PolicySetIdReference>
         </PolicySet>
 
         <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-                PolicySetId="urn:mtas:RPS:i0000:employee" PolicyCombiningAlgId="&policy-combine;first-applicable">
+                PolicySetId="urn:mtas:RPS:i0001:employee" PolicyCombiningAlgId="&policy-combine;first-applicable">
                 <Target>
                         <Subjects>
                                 <Subject>
                                         <SubjectMatch MatchId="&function;anyURI-equal">
-                                                <AttributeValue DataType="&xml;anyURI">&roles;i0000:employee</AttributeValue>
+                                                <AttributeValue DataType="&xml;anyURI">&roles;i0001:employee</AttributeValue>
                                                 <SubjectAttributeDesignator
                                                         AttributeId="&role;" DataType="&xml;anyURI" />
                                         </SubjectMatch>
@@ -82,7 +82,7 @@
                         </Subjects>
                 </Target>
 
-                <PolicySetIdReference>urn:mtas:PPS:i0000:employee</PolicySetIdReference>
+                <PolicySetIdReference>urn:mtas:PPS:i0001:employee</PolicySetIdReference>
         </PolicySet>
 
 </PolicySet>

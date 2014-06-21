@@ -16,7 +16,7 @@
 <!ENTITY action "urn:oasis:names:tc:xacml:1.0:action:">
 <!ENTITY actions "urn:oasis:names:tc:xacml:2.0:actions:">
 <!ENTITY environment "urn:oasis:names:tc:xacml:1.0:environment:">
-<!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:rbac:">
+<!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:mtas:">
 ]>
 
 
