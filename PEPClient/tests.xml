@@ -25,45 +25,25 @@
 <tests>
 
 	<group name="MTAS">
-
-		<test name="001" />
-		<test name="002" />
-		<test name="003" />
-		<test name="004" />
-		<test name="005" />
-		<test name="006" />
-		<test name="007" />
-		<test name="008" />
-		<test name="009" />
-		<test name="010" />
-		
-  	</group>
-	
-	
-<!--
-	<group name="MT-RBAC">
-
-		<test name="001" />
-		<test name="002" />
-		<test name="003" />
-		<test name="004" />
-		<test name="005" />
-		<test name="006" />
-		<test name="007" />
-		<test name="008" />
-		<test name="009" />
-		<test name="010" />
-
-	</group>
-
-	<group name="RBAC">
-		
-		<test name="001" />
-		<test name="002" />
-		<test name="003" />
-		<test name="004" />
-
-	</group>
--->
-
+        <test name="0000C" />
+        <test name="0000I" />
+        <test name="0001C" />
+        <test name="0001I" />
+        <test name="0002C" />
+        <test name="0002I" />
+        <test name="0003C" />
+        <test name="0003I" />
+        <test name="0004C" />
+        <test name="0004I" />
+        <test name="0005C" />
+        <test name="0005I" />
+        <test name="0006C" />
+        <test name="0006I" />
+        <test name="0007C" />
+        <test name="0007I" />
+        <test name="0008C" />
+        <test name="0008I" />
+        <test name="0009C" />
+        <test name="0009I" />
+    </group>
 </tests>
