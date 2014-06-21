@@ -22,17 +22,55 @@
 	operation or maintenance of any nuclear facility. -->
 
 <test name="MTAS">
-	<policySetReference ref="urn:mtas:PPS:i1:manager">PPSi1.xml</policySetReference>
-	<policySetReference ref="urn:mtas:PPS:i1:employee">PPSi1.xml</policySetReference>
-	<policySetReference ref="urn:mtas:PPS:i2:manager">PPSi2.xml</policySetReference>
-	<policySetReference ref="urn:mtas:PPS:i2:employee">PPSi2.xml</policySetReference>
-	<policySetReference ref="urn:mtas:PPS:i0001">PPSi0001.xml</policySetReference>
-	<policySetReference ref="urn:mtas:PPS:i0002">PPSi0002.xml</policySetReference>
-	<policySetReference ref="urn:mtas:RPS:i0001">RPSi0001.xml</policySetReference>
-	<policySetReference ref="urn:mtas:RPS:i0002">RPSi0002.xml</policySetReference>
-	<policySetReference ref="urn:mtas:RPS:i1:employee">RPSi1.xml</policySetReference>
-	<policySetReference ref="urn:mtas:RPS:i2:employee">RPSi2.xml</policySetReference>
 
-
+    <policySetReference ref="urn:mtas:RPS:i0000">RPSi0000.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0000:manager">PPSi0000.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0000:employee">PPSi0000.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0000:employee">RPSi0000.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0001">RPSi0001.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0001:manager">PPSi0001.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0001:employee">PPSi0001.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0001:employee">RPSi0001.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0002">RPSi0002.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0002:manager">PPSi0002.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0002:employee">PPSi0002.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0002:employee">RPSi0002.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0003">RPSi0003.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0003:manager">PPSi0003.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0003:employee">PPSi0003.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0003:employee">RPSi0003.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0004">RPSi0004.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0004:manager">PPSi0004.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0004:employee">PPSi0004.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0004:employee">RPSi0004.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0005">RPSi0005.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0005:manager">PPSi0005.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0005:employee">PPSi0005.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0005:employee">RPSi0005.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0006">RPSi0006.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0006:manager">PPSi0006.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0006:employee">PPSi0006.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0006:employee">RPSi0006.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0007">RPSi0007.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0007:manager">PPSi0007.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0007:employee">PPSi0007.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0007:employee">RPSi0007.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0008">RPSi0008.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0008:manager">PPSi0008.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0008:employee">PPSi0008.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0008:employee">RPSi0008.xml</policySetReference>
+    
+    <policySetReference ref="urn:mtas:RPS:i0009">RPSi0009.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0009:manager">PPSi0009.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0009:employee">PPSi0009.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0009:employee">RPSi0009.xml</policySetReference>
+    
 </test>
-

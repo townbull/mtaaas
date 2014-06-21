@@ -1,0 +1,5 @@
+    <policySetReference ref="urn:mtas:RPS:i0002">RPSi0002.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0002:manager">PPSi0002.xml</policySetReference>
+    <policySetReference ref="urn:mtas:PPS:i0002:employee">PPSi0002.xml</policySetReference>
+    <policySetReference ref="urn:mtas:RPS:i0002:employee">RPSi0002.xml</policySetReference>
+    

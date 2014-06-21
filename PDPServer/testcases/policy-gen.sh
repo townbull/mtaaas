@@ -4,6 +4,8 @@ thousands=0
 hundreds=0
 tens=0
 
+head -n 25 ../MTAS.xml > tmp && mv tmp ../MTAS.xml
+
 #for tens in {0..9}
 #do
 
@@ -25,6 +27,11 @@ tens=0
 		echo "Generating MTASPPSi$num.xml"
         cp MTASPPStemp.xml MTASPPSi$num.xml
         sed "s/i0002/i$num/g" MTASPPSi$num.xml > tmp && mv tmp MTASPPSi$num.xml
+
+		echo "Adding reference of i$num to MTAS.xml"
+		sed "s/i0002/i$num/g" ../MTAStemp.xml >> ../MTAS.xml
 	done
 
 #done
+
+echo "</test>" >> ../MTAS.xml
