@@ -20,21 +20,21 @@
 ]>
 
 
-<!-- urn:mtas:RPS:i1 maintained by i1 -->
+<!-- urn:mtas:RPS:i0001 maintained by i0001 -->
 
 <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os
         access_control-xacml-2.0-policy-schema-os.xsd"
-	PolicySetId="urn:mtas:RPS:i1" PolicyCombiningAlgId="&policy-combine;first-applicable">
+	PolicySetId="urn:mtas:RPS:i0001" PolicyCombiningAlgId="&policy-combine;first-applicable">
 	<Target />
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:RPS:i1:manager" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		PolicySetId="urn:mtas:RPS:i0001:manager" PolicyCombiningAlgId="&policy-combine;first-applicable">
 		<Target>
 			<Subjects>
 				<Subject>
 					<SubjectMatch MatchId="&function;anyURI-equal">
-						<AttributeValue DataType="&xml;anyURI">&roles;i1:manager</AttributeValue>
+						<AttributeValue DataType="&xml;anyURI">&roles;i0001:manager</AttributeValue>
 						<SubjectAttributeDesignator
 							AttributeId="&role;" DataType="&xml;anyURI" />
 					</SubjectMatch>
@@ -42,17 +42,17 @@
 			</Subjects>
 		</Target>
 
-		<PolicySetIdReference>urn:mtas:PPS:i1:manager</PolicySetIdReference>
-		<PolicySetIdReference>urn:mtas:RPS:i1:employee</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:PPS:i0001:manager</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0001:employee</PolicySetIdReference>
 	</PolicySet>
 
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:RPS:i1:employee" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		PolicySetId="urn:mtas:RPS:i0001:employee" PolicyCombiningAlgId="&policy-combine;first-applicable">
 		<Target>
 			<Subjects>
 				<Subject>
 					<SubjectMatch MatchId="&function;anyURI-equal">
-						<AttributeValue DataType="&xml;anyURI">&roles;i1:employee</AttributeValue>
+						<AttributeValue DataType="&xml;anyURI">&roles;i0001:employee</AttributeValue>
 						<SubjectAttributeDesignator
 							AttributeId="&role;" DataType="&xml;anyURI" />
 					</SubjectMatch>
@@ -60,7 +60,7 @@
 			</Subjects>
 		</Target>
 
-		<PolicySetIdReference>urn:mtas:PPS:i1:employee</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:PPS:i0001:employee</PolicySetIdReference>
 	</PolicySet>
 
 </PolicySet>

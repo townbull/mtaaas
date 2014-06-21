@@ -26,14 +26,15 @@
         access_control-xacml-2.0-policy-schema-os.xsd"
 	PolicySetId="urn:mtas:TPS" PolicyCombiningAlgId="&policy-combine;first-applicable">
 	<Target />
-	<!-- urn:mtas:TPS:i1 maintained by i1 -->
+
+	<!-- urn:mtas:TPS:i0000 maintained by i0000 -->
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:TPS:i1" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		PolicySetId="urn:mtas:TPS:i0000" PolicyCombiningAlgId="&policy-combine;first-applicable">
 		<Target>
 			<Subjects>
 				<Subject>
 					<SubjectMatch MatchId="&function;anyURI-equal">
-						<AttributeValue DataType="&xml;anyURI">&tenants;i1</AttributeValue>
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0000</AttributeValue>
 						<SubjectAttributeDesignator
 							AttributeId="&tenant;" DataType="&xml;anyURI" />
 					</SubjectMatch>
@@ -41,18 +42,18 @@
 			</Subjects>
 		</Target>
 
-		<PolicySetIdReference>urn:mtas:RPS:i1</PolicySetIdReference>
-		<PolicySetIdReference>urn:mtas:RPS:i2</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0000</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0001</PolicySetIdReference>
 	</PolicySet>
 	
-	<!-- urn:mtas:TPS:i2 maintained by i2 -->
+	<!-- urn:mtas:TPS:i0001 maintained by i0001 -->
 	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-		PolicySetId="urn:mtas:TPS:i2" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		PolicySetId="urn:mtas:TPS:i0001" PolicyCombiningAlgId="&policy-combine;first-applicable">
 		<Target>
 			<Subjects>
 				<Subject>
 					<SubjectMatch MatchId="&function;anyURI-equal">
-						<AttributeValue DataType="&xml;anyURI">&tenants;i2</AttributeValue>
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0001</AttributeValue>
 						<SubjectAttributeDesignator
 							AttributeId="&tenant;" DataType="&xml;anyURI" />
 					</SubjectMatch>
@@ -60,7 +61,160 @@
 			</Subjects>
 		</Target>
 
-		<PolicySetIdReference>urn:mtas:RPS:i2</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0001</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0002</PolicySetIdReference>
+	</PolicySet>
+
+	<!-- urn:mtas:TPS:i0002 maintained by i0002 -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:i0002" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0002</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:i0002</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0003</PolicySetIdReference>
+	</PolicySet>
+
+	<!-- urn:mtas:TPS:i0003 maintained by i0003 -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:i0003" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0003</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:i0003</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0004</PolicySetIdReference>
+	</PolicySet>
+
+	<!-- urn:mtas:TPS:i0004 maintained by i0004 -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:i0004" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0004</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:i0004</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0005</PolicySetIdReference>
+	</PolicySet>
+
+	<!-- urn:mtas:TPS:i0005 maintained by i0005 -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:i0005" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0005</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:i0005</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0006</PolicySetIdReference>
+	</PolicySet>
+	
+	<!-- urn:mtas:TPS:i0006 maintained by i0006 -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:i0006" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0006</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:i0006</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0007</PolicySetIdReference>
+	</PolicySet>
+
+	<!-- urn:mtas:TPS:i0007 maintained by i0007 -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:i0007" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0007</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:i0007</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0008</PolicySetIdReference>
+	</PolicySet>
+
+	<!-- urn:mtas:TPS:i0008 maintained by i0008 -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:i0008" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0008</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:i0008</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0009</PolicySetIdReference>
+	</PolicySet>
+
+	<!-- urn:mtas:TPS:i0009 maintained by i0009 -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:i0009" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;i0009</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:i0009</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:i0000</PolicySetIdReference>
 	</PolicySet>
 
 </PolicySet>

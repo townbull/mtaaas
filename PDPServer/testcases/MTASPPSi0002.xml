@@ -16,7 +16,7 @@
 <!ENTITY action "urn:oasis:names:tc:xacml:1.0:action:">
 <!ENTITY actions "urn:oasis:names:tc:xacml:2.0:actions:">
 <!ENTITY environment "urn:oasis:names:tc:xacml:1.0:environment:">
-<!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:rbac:">
+<!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:mtas:">
 ]>
 
 
@@ -29,7 +29,7 @@
 	<Target />
 
   <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-  	PolicySetId="urn:rbac:PPS:i0002:manager" PolicyCombiningAlgId="&policy-combine;first-applicable">
+  	PolicySetId="urn:mtas:PPS:i0002:manager" PolicyCombiningAlgId="&policy-combine;first-applicable">
   	<Target />
   
   	<!-- Permissions specifically for the manager role -->
@@ -69,7 +69,7 @@
   </PolicySet>
   
   <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-  	PolicySetId="urn:rbac:PPS:i0002:employee" PolicyCombiningAlgId="&policy-combine;first-applicable">
+  	PolicySetId="urn:mtas:PPS:i0002:employee" PolicyCombiningAlgId="&policy-combine;first-applicable">
   	<Target />
   
   	<!-- Permissions specifically for the employee role -->

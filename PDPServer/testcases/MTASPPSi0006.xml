@@ -16,20 +16,20 @@
 <!ENTITY action "urn:oasis:names:tc:xacml:1.0:action:">
 <!ENTITY actions "urn:oasis:names:tc:xacml:2.0:actions:">
 <!ENTITY environment "urn:oasis:names:tc:xacml:1.0:environment:">
-<!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:rbac:">
+<!ENTITY policyset-id "urn:oasis:names:tc:xacml:2.0:mtas:">
 ]>
 
 
-<!-- urn:mtas:PPS:i0002 maintained by i0002 -->
+<!-- urn:mtas:PPS:i0006 maintained by i0006 -->
 <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="urn:oasis:names:tc:xacml:2.0:policy:schema:os
         access_control-xacml-2.0-policy-schema-os.xsd"
-	PolicySetId="urn:mtas:PPS:i0002" PolicyCombiningAlgId="&policy-combine;first-applicable">
+	PolicySetId="urn:mtas:PPS:i0006" PolicyCombiningAlgId="&policy-combine;first-applicable">
 	<Target />
 
   <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-  	PolicySetId="urn:rbac:PPS:i0002:manager" PolicyCombiningAlgId="&policy-combine;first-applicable">
+  	PolicySetId="urn:mtas:PPS:i0006:manager" PolicyCombiningAlgId="&policy-combine;first-applicable">
   	<Target />
   
   	<!-- Permissions specifically for the manager role -->
@@ -48,7 +48,7 @@
   								AttributeId="&resource;resource-id" DataType="&xml;string" />
   						</ResourceMatch>
   						<ResourceMatch MatchId="&function;anyURI-equal">
-						    <AttributeValue DataType="&xml;anyURI">&resource-tenants;i0002</AttributeValue>
+						    <AttributeValue DataType="&xml;anyURI">&resource-tenants;i0006</AttributeValue>
 						    <ResourceAttributeDesignator
 							    AttributeId="&resource-tenant;" DataType="&xml;anyURI" />
   						</ResourceMatch>
@@ -69,7 +69,7 @@
   </PolicySet>
   
   <PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
-  	PolicySetId="urn:rbac:PPS:i0002:employee" PolicyCombiningAlgId="&policy-combine;first-applicable">
+  	PolicySetId="urn:mtas:PPS:i0006:employee" PolicyCombiningAlgId="&policy-combine;first-applicable">
   	<Target />
   
   	<!-- Permissions specifically for the employee role -->
@@ -88,7 +88,7 @@
   								AttributeId="&resource;resource-id" DataType="&xml;string" />
   						</ResourceMatch>
   						<ResourceMatch MatchId="&function;anyURI-equal">
-						    <AttributeValue DataType="&xml;anyURI">&resource-tenants;i0002</AttributeValue>
+						    <AttributeValue DataType="&xml;anyURI">&resource-tenants;i0006</AttributeValue>
 						    <ResourceAttributeDesignator
 							    AttributeId="&resource-tenant;" DataType="&xml;anyURI" />
   						</ResourceMatch>

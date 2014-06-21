@@ -26,8 +26,10 @@
 	<policySetReference ref="urn:mtas:PPS:i1:employee">PPSi1.xml</policySetReference>
 	<policySetReference ref="urn:mtas:PPS:i2:manager">PPSi2.xml</policySetReference>
 	<policySetReference ref="urn:mtas:PPS:i2:employee">PPSi2.xml</policySetReference>
-	<policySetReference ref="urn:mtas:RPS:i1">RPSi1.xml</policySetReference>
-	<policySetReference ref="urn:mtas:RPS:i2">RPSi2.xml</policySetReference>
+	<policySetReference ref="urn:mtas:PPS:i0001">PPSi0001.xml</policySetReference>
+	<policySetReference ref="urn:mtas:PPS:i0002">PPSi0002.xml</policySetReference>
+	<policySetReference ref="urn:mtas:RPS:i0001">RPSi0001.xml</policySetReference>
+	<policySetReference ref="urn:mtas:RPS:i0002">RPSi0002.xml</policySetReference>
 	<policySetReference ref="urn:mtas:RPS:i1:employee">RPSi1.xml</policySetReference>
 	<policySetReference ref="urn:mtas:RPS:i2:employee">RPSi2.xml</policySetReference>
 
