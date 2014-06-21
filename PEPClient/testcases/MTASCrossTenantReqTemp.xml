@@ -25,11 +25,11 @@
 		</Attribute>
 		<Attribute AttributeId="&role;" DataType="&xml;anyURI"
 			IncludeInResult="false">
-			<AttributeValue>&roles;tssss:manager</AttributeValue>
+			<AttributeValue>&roles;issss:manager</AttributeValue>
 		</Attribute>
 		<Attribute AttributeId="&tenant;" DataType="&xml;anyURI"
 			IncludeInResult="false">
-			<AttributeValue>&tenants;tssss</AttributeValue>
+			<AttributeValue>&tenants;issss</AttributeValue>
 		</Attribute>
 	</Subject>
 	<Resource>
@@ -39,7 +39,7 @@
 		</Attribute>
 		<Attribute AttributeId="&tenant;" DataType="&xml;anyURI"
 			IncludeInResult="false">
-			<AttributeValue>&tenants;tgggg</AttributeValue>
+			<AttributeValue>&tenants;igggg</AttributeValue>
 		</Attribute>
 	</Resource>
 	<Action>
