@@ -19,8 +19,8 @@ tens=0
         
         echo "Generating MTASRPSi$num.xml"
         cp MTASRPStemp.xml MTASRPSi$num.xml
-        sed "s/i0002/i$num/g" MTASRPSi$num.xml > tmp && mv tmp MTASRPSi$num.xml
-        sed "s/i0001/i$pre/g" MTASRPSi$num.xml > tmp && mv tmp MTASRPSi$num.xml
+        sed "s/igggg/i$num/g" MTASRPSi$num.xml > tmp && mv tmp MTASRPSi$num.xml
+        sed "s/issss/i$pre/g" MTASRPSi$num.xml > tmp && mv tmp MTASRPSi$num.xml
 
 		echo "Generating MTASPPSi$num.xml"
         cp MTASPPStemp.xml MTASPPSi$num.xml
