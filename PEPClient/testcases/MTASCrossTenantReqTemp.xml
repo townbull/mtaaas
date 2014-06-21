@@ -25,7 +25,7 @@
 		</Attribute>
 		<Attribute AttributeId="&role;" DataType="&xml;anyURI"
 			IncludeInResult="false">
-			<AttributeValue>&roles;issss:manager</AttributeValue>
+			<AttributeValue>&roles;igggg:manager</AttributeValue>
 		</Attribute>
 		<Attribute AttributeId="&tenant;" DataType="&xml;anyURI"
 			IncludeInResult="false">
