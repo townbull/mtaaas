@@ -70,7 +70,7 @@
 
 			<arg file="../src/tests/tests.xml" />
 -->					
-			<arg file="RBAC.xml" />
+			<arg file="MTAS.xml" />
 
 			<arg path="${confDir}" />
 		</java>

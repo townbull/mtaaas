@@ -23,7 +23,7 @@
 	operation or maintenance of any nuclear facility. -->
 
 <test name="RBAC">
-	<policySetReference ref="urn:rbac:PPS:manager:role">PolicySetPPSmanager.xml</policySetReference>
+	<policySetReference ref="urn:rbac:PPS:manager:role">PolicySetPPSManager.xml</policySetReference>
 	<policySetReference ref="urn:rbac:PPS:employee:role">PolicySetPPSemployee.xml</policySetReference>
 </test>
 
