@@ -5,6 +5,7 @@ hundreds=0
 tens=0
 
 head -n 25 ../MTAS.xml > tmp && mv tmp ../MTAS.xml
+head -n 29 MTASPolicy.xml > tmp && mv tmp MTASPolicy.xml
 
 for tens in {0..9}
 do
@@ -30,8 +31,12 @@ do
 
 		echo "Adding reference of i$num to MTAS.xml"
 		sed "s/i0002/i$num/g" ../MTAStemp.xml >> ../MTAS.xml
+
+        echo "Adding PolicySet of i$num to MTASPolicy.xml"
+        sed "s/issss/i$pre/g;s/igggg/i$num/g" MTASPolicytemp.xml >> MTASPolicy.xml
 	done
 
 done
 
 echo "</test>" >> ../MTAS.xml
+echo "</PolicySet>" >> MTASPolicy.xml
