@@ -6,8 +6,8 @@ tens=0
 
 head -n 25 ../MTAS.xml > tmp && mv tmp ../MTAS.xml
 
-#for tens in {0..9}
-#do
+for tens in {0..9}
+do
 
 	for units in {0..9}
     do
@@ -32,6 +32,6 @@ head -n 25 ../MTAS.xml > tmp && mv tmp ../MTAS.xml
 		sed "s/i0002/i$num/g" ../MTAStemp.xml >> ../MTAS.xml
 	done
 
-#done
+done
 
 echo "</test>" >> ../MTAS.xml
