@@ -6,6 +6,9 @@ tens=0
 
 head -n 27 ../tests.xml > tmp && mv tmp ../tests.xml
 
+for hundreds in {0..9}
+do
+
 for tens in {0..9}
 do
 
@@ -38,6 +41,8 @@ do
 		echo "        <test name=\"${num}I\" />" >> ../tests.xml
 
 	done
+
+done
 done
 
 echo "    </group>" >> ../tests.xml

@@ -7,6 +7,10 @@ tens=0
 head -n 25 ../MTAS.xml > tmp && mv tmp ../MTAS.xml
 head -n 29 MTASPolicy.xml > tmp && mv tmp MTASPolicy.xml
 
+
+for hundreds in {0..9}
+do
+
 for tens in {0..9}
 do
 
@@ -36,6 +40,7 @@ do
         sed "s/issss/i$pre/g;s/igggg/i$num/g" MTASPolicytemp.xml >> MTASPolicy.xml
 	done
 
+done
 done
 
 echo "</test>" >> ../MTAS.xml
