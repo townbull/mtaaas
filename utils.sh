@@ -4,7 +4,7 @@ USAGE="Usage: $0 <Mode> <PEP Cnt> <Run Cnt> \
 				<PDP IP> <result file>"
 
 
-PDP="10.245.122.80 10.245.122.74 10.245.122.73 10.245.123.61"
+PDP="10.245.122.80 10.245.122.74 10.245.122.73 10.245.123.32 10.245.123.54"
 
 ## CHANGE IP1, IP2 to be whatever your IP addresses are
 IP="10.245.122.83"
@@ -20,7 +20,7 @@ TMP="$ROOT/tmp"
 #TMP=$(mktemp tmp.XXXXXX)
 COPY="scp /root/.ssh/id_rsa /root/.ssh/id_rsa.pub"
 ###UBUNTU
-#ICMD="apt-get update; apt-get install -y openmpi-bin"
+ICMDUBUNTU="apt-get update; apt-get install -y git openjdk-7-jdk ant"
 ###SMARTOS
 ICMDSMARTOS="pkgin install -y scmgit sun-jdk6-6.0.26 apache-ant-1.8.4"
 ICMDCENTOS="yum install -y java ant git"
@@ -51,6 +51,9 @@ then
 	if [ $2 == "pdp" ]
 	then
 		ICMD=$ICMDCENTOS
+	elif [ $2 == "pdpu" ]
+	then
+		ICMD=$ICMDUBUNTU
 	else
 		ICMD=$ICMDSMARTOS
 	fi
@@ -67,7 +70,7 @@ then
         echo ssh root@$ip $ICMD
         ssh root@$ip $ICMD
 	done
-elif [ $1 == "--git" ] || [ $1 == "-g" ]   #require $2 $3 $4
+elif [ $1 == "--git" ] || [ $1 == "-g" ]   #require $2
 then
 	
 	GITCMD="git clone git@github.com:townbull/mtaaas.git $ROOT || \
@@ -75,8 +78,7 @@ then
 		
 	for ip in $IPS
 	do
-		echo "Git syncing source files"
-		echo ssh root@$ip $GITCMD
+		echo "Git syncing source files on $ip"
 		ssh root@$ip $GITCMD
 	done
 

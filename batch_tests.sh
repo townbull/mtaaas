@@ -5,11 +5,13 @@ ROOT="/root/mtaaas"
 PDP1="10.245.122.80"
 PDP2="10.245.122.73"
 PDP4="10.245.122.74"
-PDP="$PDP1 $PDP2 $PDP4"
+PDP8="10.245.123.32"
+PDP16="10.245.123.54"
+PDP="$PDP1 $PDP2 $PDP4 $PDP8 $PDP16"
 
-PDPS="1 2 4"
-PEPS="1 2 4"
-RUNS="1 10 100 1000"
+PDPS="1 2 4 8 16"
+PEPS="8"
+RUNS="1 2 3 4 5 6 7 8 9 10"
 
 #if [ $# != "2" ]
 #then
@@ -54,7 +56,7 @@ do
 		rn=$runs
 	fi
 
-	resultfile="pdp$p-$peps-$rn.txt"
+	resultfile="pdp$p-$peps-$rn-perf.txt"
 	echo $resultfile
 
 #if [ $1 == "-r" ]
