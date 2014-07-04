@@ -6,8 +6,11 @@ tens=0
 
 head -n 27 ../tests.xml > tmp && mv tmp ../tests.xml
 
-#for tens in {0..9}
-#do
+for hundreds in {0..9}
+do
+
+for tens in {0..9}
+do
 
 	for units in {0..9}
     do
@@ -39,7 +42,8 @@ head -n 27 ../tests.xml > tmp && mv tmp ../tests.xml
 
 	done
 
-#done
+done
+done
 
 echo "    </group>" >> ../tests.xml
 echo "</tests>" >> ../tests.xml

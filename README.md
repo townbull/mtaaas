@@ -31,3 +31,9 @@ The tests will automatically run and the results will be stored in pdpresults an
 $ killall ant
 ```
 
+> **Note:** If error message "Unsupported major.minor version 51.0" shows, set the jdk and jre version to 7.
+In Ubuntu:
+```
+$ sudo apt-get install openjdk-7-jdk
+$ sudo update-alternatives --config java
+```

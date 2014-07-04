@@ -1,0 +1,19 @@
+	<!-- urn:mtas:TPS:issss maintained by issss -->
+	<PolicySet xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
+		PolicySetId="urn:mtas:TPS:issss" PolicyCombiningAlgId="&policy-combine;first-applicable">
+		<Target>
+			<Subjects>
+				<Subject>
+					<SubjectMatch MatchId="&function;anyURI-equal">
+						<AttributeValue DataType="&xml;anyURI">&tenants;issss</AttributeValue>
+						<SubjectAttributeDesignator
+							AttributeId="&tenant;" DataType="&xml;anyURI" />
+					</SubjectMatch>
+				</Subject>
+			</Subjects>
+		</Target>
+
+		<PolicySetIdReference>urn:mtas:RPS:issss</PolicySetIdReference>
+		<PolicySetIdReference>urn:mtas:RPS:igggg</PolicySetIdReference>
+	</PolicySet>
+
